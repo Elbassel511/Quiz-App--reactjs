@@ -1,25 +1,22 @@
-import logo from './logo.svg';
+import React from 'react'
 import './App.css';
+import StartPage from "./components/StartPage"
+import QuizPage from './components/QuizPage'
 
-function App() {
+
+
+export default function App() {
+  
+  const [startPage,setPage]= React.useState(true)
+  
+  function changePage (){ setPage(prev => !prev)  }
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
-}
+    // start game page
+    <>
+    {startPage && <StartPage handlingClick = {changePage} />}
+    {!startPage && <QuizPage newQuiz = {changePage} />}
+    </>
 
-export default App;
+  )
+}

@@ -1,38 +1,154 @@
-.App {
-  text-align: center;
+/* inter and karla google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Karla:wght@700&display=swap');
+
+*,
+*::after,
+*::before{
+    box-sizing: border-box;
+    margin: 0;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+html {
+    font-size: 62.5%;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.start-page{
+    height: 100vh;
+    width: 100vw;
+    background: url(../public/images/blobLB.png) left bottom no-repeat,
+                url(../public/images/blobs.png) top right no-repeat ,
+                #F5F7FB;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.start-content{
+    text-align: center;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.start--header {
+    font-size: 3.2rem;
+    font-weight: 700;
+    font-family: 'Karla', sans-serif;
+    color: hsla(231, 42%, 28%, 1);
 }
 
-.App-link {
-  color: #61dafb;
+.start--btn {
+    font-size: 1.6rem;
+    font-weight: 500;
+    color:  #F5F7FB;
+    background-color: #4D5B9E;
+    padding: 1.6rem 6rem;
+    border: none;
+    border-radius: 1.5rem;
+    margin-top: 3rem;
+    margin-inline:auto ;
+    cursor: pointer;
+
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.quiz-page{
+    height: 100vh;
+    width: 100vw;
+    background: url(../public/images/blobqlb.png) left bottom  no-repeat,
+                url(../public/images/blobqtr.png) top right no-repeat ,
+                #F5F7FB;
+    overflow-y: scroll;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 4rem;
+}
+
+.question {
+    border-bottom: 0.8px solid #DBDEF0;
+    padding-block: 1.5rem;
+    max-width:80rem;
+}
+.question--q {
+    font-family: karla,sans-serif;
+    font-weight: 700;
+    font-size: 1.6rem;
+    color:hsla(231, 42%, 28%, 1) ;
+    line-height: 19px;
+}
+.question--choises{
+    display: flex;
+}
+
+.choice {
+    margin-right: 1.3rem;
+    text-align: center;
+    font-size: 1.1rem;
+    font-weight: 500;
+    font-family: inter,sans-serif;
+    min-width:6.5rem;
+    padding: 4px 9px ;
+    border: 0.8px solid #4D5B9E;
+    border-radius: 8px;
+    margin-top: 1.3rem;
+    color: hsla(231, 42%, 28%, 1);
+    cursor: pointer;
+}
+
+.choice:hover {
+    background-color: #D6DBF5;
+    border:0.8px solid transparent;
+}
+.choice.hold {
+    background-color: #D6DBF5;
+    border:0.8px solid transparent;
+}
+.quiz-btn{
+    font-size: 1.1rem;
+    font-weight: 600;
+    font-family: inter,sans-serif;
+    line-height: 12px;
+    padding: 1.3rem 2rem;
+    margin:0 ;
+    min-width: 11rem;
+}
+
+.choice.show {
+    opacity :0.5;
+    cursor: default;
+
+} 
+
+.choice.show.correct{
+    background-color: hsla(133, 46%, 71%, 1);
+    opacity: 1;
+    border:0.8px solid transparent;
+}
+
+.container--sumbit {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-block: 3rem;
+    gap:3rem
+}
+
+.container--sumbit > span,
+label {
+    font-family: Inter,sans-serif;
+    font-weight: 700;
+    font-size: 1.3rem;
+    line-height: 1.5rem;
+    text-align: center;
+    color: #293264;
+
+}
+
+.form {
+    margin-top: 2rem;
+}
+.form input {
+    font-family: Inter,sans-serif;
+    font-weight: 700;
+    font-size: 1.3rem;
+    line-height: 1.5rem;
+    color: #293264;
+    width: 10rem;
+
 }
